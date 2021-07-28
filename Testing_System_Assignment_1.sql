@@ -88,7 +88,6 @@ create table ExamQuestion
     ExamID     int references Exam (ExamID),
     QuestionID int references Question (QuestionID),
     primary key (ExamID, QuestionID)
-
 );
 
 -- TS2 --
@@ -111,11 +110,11 @@ values ('Truong phong'),
 
 ALTER TABLE Account AUTO_INCREMENT = 100;
 insert into Account(Email, Username, FullName, DepartmentID, PositionID, CreateDate)
-values ('nva@gmail.com','nva', 'Nguyen Van A', 'De001', 'Po001', '2020-09-22'),
-       ('nvb@gmail.com','nvb', 'Nguyen Van B', 'De002', 'Po002', '2020-10-22'),
-       ('nvc@gmail.com','nvc', 'Nguyen Van C', 'De003', 'Po003', '2020-11-22'),
-       ('nvd@gmail.com','nvd', 'Nguyen Van D', 'De004', 'Po004', '2020-12-22'),
-       ('nve@gmail.com','nve', 'Nguyen Van E', 'De005', 'Po005', '2021-01-22');
+values ('nva@gmail.com','nva', 'Nguyen Van A', '001', '001', '2020-09-22'),
+       ('nvb@gmail.com','nvb', 'Nguyen Van B', '002', '002', '2020-10-22'),
+       ('nvc@gmail.com','nvc', 'Nguyen Van C', '003', '003', '2020-11-22'),
+       ('nvd@gmail.com','nvd', 'Nguyen Van D', '004', '004', '2020-12-22'),
+       ('nve@gmail.com','nve', 'Nguyen Van E', '005', '005', '2021-01-22');
 
 ALTER TABLE `Group` AUTO_INCREMENT = 100;
 insert into `Group`(GroupName, CreatorID, CreatorDate)
@@ -179,5 +178,6 @@ values ('Exam001'),
        ('Exam003'),
        ('Exam004'),
        ('Exam005');
-# sdhfkds
-# cmt
+
+-- TS3 ---
+select DepartmentID from Department;
